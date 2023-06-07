@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NFT Dashboard</title>
+
+    <!-- Bootstrap 5 CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- slick css
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- Font style links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope&family=Poppins:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <!-- slick theme css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- Font awesome icon Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="/style.css" />
+
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar starts -->
+
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-3 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                <img src="/assests/logo.png" class="img-fluid" alt="">
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-tachometer-alt me-2"></i> Dashboard
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-project-diagram me-2"></i> Project
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-chart-line me-2"></i> Analytics
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-paperclip me-2"></i> Reports
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-shopping-cart me-2"></i> Store Mng
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-gift me-2"></i> Products
+                </a>
+            </div>
+        </div>
+
+        <!-- sidebar ends -->
+
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light py-3 px-4"
+                style="background-color: #fff; border-radius: 30px 30px;">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left secondd-text fs-4 me-3" id="menu-toggle"></i>
+                    <i class="fas fa-thin fa-magnifying-glass fs-4 me-3"></i> <input type="search"
+                        placeholder="search here">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle second-text fw-bold" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                John Doe
+                                <img src="/assests/pexels-photo-4100748 1.png" class="img-fluid rounded-full">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="#" class="dropdown-item">Profile</a></li>
+                                <li><a href="#" class="dropdown-item">Setting</a></li>
+                                <li><a href="#" class="dropdown-item">LogOut</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+            </nav>
+            <div class="container-fluid px-4">
+                <div class="row">
+                    <div class="col-xxl-9 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="wrapper-text">
+                            <div class="text">
+                                <h2>Wallet</h2>
+                            </div>
+                            <div class="text-btn">
+                                <a href="#" class="btn btn-text">See More <i class="fas fa-thin fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                <div class="card-wrapper">
+                                    <div class="card">
+                                        <img src="/assests/grid-first.png" class="img-fluid" alt="">
+                                        <div class="card-text">
+                                            <h4>Potion Store #289</h4>
+                                            <ul>
+                                                <li>In wallet</li>
+                                            </ul>
+                                        </div>
+                                        <div class="button">
+                                            <a href="#" class="btn card-btn">Select for Stack Action</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                <div class="card-wrapper">
+                                    <div class="card">
+                                        <img src="/assests/grid-first.png" class="img-fluid" alt="">
+                                        <div class="card-text">
+                                            <h4>Potion Store #289</h4>
+                                            <ul>
+                                                <li>In wallet</li>
+                                            </ul>
+                                        </div>
+                                        <div class="button">
+                                            <a href="#" class="btn card-btn">Select for Stack Action</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                <div class="card-wrapper">
+                                    <div class="card">
+                                        <img src="/assests/grid-first.png" class="img-fluid" alt="">
+                                        <div class="card-text">
+                                            <h4>Potion Store #289</h4>
+                                            <ul>
+                                                <li>In wallet</li>
+                                            </ul>
+                                        </div>
+                                        <div class="button">
+                                            <a href="#" class="btn card-btn">Select for Stack Action</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second cards section -->
+                        <div class="row d-flex justify-content-center">
+                            <div class="wrapper-text">
+                                <div class="text">
+                                    <h2>Wallet</h2>
+                                </div>
+                                <div class="text-btn">
+                                    <a href="#" class="btn btn-text">See More <i
+                                            class="fas fa-thin fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                <div class="card-wrapper">
+                                    <div class="card">
+                                        <img src="/assests/grid-second.png" class="img-fluid" alt="">
+                                        <div class="card-text">
+                                            <h4>Potion Store #289</h4>
+                                            <ul>
+                                                <li>In wallet</li>
+                                            </ul>
+                                        </div>
+                                        <div class="button">
+                                            <a href="#" class="btn card-btn">Select for Stack Action</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                <div class="card-wrapper">
+                                    <div class="card">
+                                        <img src="/assests/grid-second.png" class="img-fluid" alt="">
+                                        <div class="card-text">
+                                            <h4>Potion Store #289</h4>
+                                            <ul>
+                                                <li>In wallet</li>
+                                            </ul>
+                                        </div>
+                                        <div class="button">
+                                            <a href="#" class="btn card-btn">Select for Stack Action</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                <div class="card-wrapper">
+                                    <div class="card">
+                                        <img src="/assests/grid-second.png" class="img-fluid" alt="">
+                                        <div class="card-text">
+                                            <h4>Potion Store #289</h4>
+                                            <ul>
+                                                <li>In wallet</li>
+                                            </ul>
+                                        </div>
+                                        <div class="button">
+                                            <a href="#" class="btn card-btn">Select for Stack Action</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-xxl-3 col-xl-10 col-lg-10 col-md-10 col-sm-12">
+                        <div class="graph-side">
+                            <h4>Rewards</h4>
+                            <img src="/assests/side-graph.png" alt="">
+                        </div>
+                        <div class="graph-tab">
+                            <div class="tabs-sec">
+                                <div class="report-text">
+                                    <h3>Wallet Activity</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit adipiscing elit.
+                                    </p>
+                                </div>
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-home" type="button" role="tab"
+                                            aria-controls="pills-home" aria-selected="true">
+                                            Monthly
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-profile" type="button" role="tab"
+                                            aria-controls="pills-profile" aria-selected="false">
+                                            Weekly
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-contact" type="button" role="tab"
+                                            aria-controls="pills-contact" aria-selected="false">
+                                            Today
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                        aria-labelledby="pills-home-tab">
+                                        <div class="row graph-row">
+                                            <div class="col-lg-2 col-2">
+                                                <div class="graph-arrow">
+                                                    <i class="fa-regular fa-arrow-down"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-head">
+                                                    <h4>Withdraw</h4>
+                                                    <p>1 Feb 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-2">
+                                                <div class="dollar-text">
+                                                    <h5>-$5,567</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-list">
+                                                    <ul>
+                                                        <li>Pending</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row graph-row">
+                                            <div class="col-lg-2 col-2">
+                                                <div class="graph-arrow-2">
+                                                    <i class="fa-regular fa-arrow-up"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-head">
+                                                    <h4>Withdraw</h4>
+                                                    <p>1 Feb 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-2">
+                                                <div class="dollar-text">
+                                                    <h5>-$5,567</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-list">
+                                                    <ul>
+                                                        <li>Pending</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row graph-row">
+                                            <div class="col-lg-2 col-2">
+                                                <div class="graph-arrow">
+                                                    <i class="fa-regular fa-arrow-down"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-head">
+                                                    <h4>Withdraw</h4>
+                                                    <p>1 Feb 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-2">
+                                                <div class="dollar-text">
+                                                    <h5>-$5,567</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-list">
+                                                    <ul>
+                                                        <li>Pending</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row graph-row">
+                                            <div class="col-lg-2 col-2">
+                                                <div class="graph-arrow-2">
+                                                    <i class="fa-regular fa-arrow-up"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-head">
+                                                    <h4>Withdraw</h4>
+                                                    <p>1 Feb 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-2">
+                                                <div class="dollar-text">
+                                                    <h5>-$5,567</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-list">
+                                                    <ul>
+                                                        <li>Pending</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-12">
+                                                <div class="button-last">
+                                                    <a href="#" class="btn text-btn">See All
+                                                        <i class="fa-regular fa-arrow-down fa-rotate-270"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                        aria-labelledby="pills-profile-tab">
+                                        <div class="row graph-row">
+                                            <div class="col-lg-2 col-2">
+                                                <div class="graph-arrow">
+                                                    <i class="fa-regular fa-arrow-down"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-head">
+                                                    <h4>Withdraw</h4>
+                                                    <p>1 Feb 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-2">
+                                                <div class="dollar-text">
+                                                    <h5>-$5,567</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-list">
+                                                    <ul>
+                                                        <li>Pending</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row graph-row">
+                                            <div class="col-lg-2 col-2">
+                                                <div class="graph-arrow-2">
+                                                    <i class="fa-regular fa-arrow-up"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-head">
+                                                    <h4>Withdraw</h4>
+                                                    <p>1 Feb 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-2">
+                                                <div class="dollar-text">
+                                                    <h5>-$5,567</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-list">
+                                                    <ul>
+                                                        <li>Pending</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row graph-row">
+                                            <div class="col-lg-2 col-2">
+                                                <div class="graph-arrow">
+                                                    <i class="fa-regular fa-arrow-down"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-head">
+                                                    <h4>Withdraw</h4>
+                                                    <p>1 Feb 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-2">
+                                                <div class="dollar-text">
+                                                    <h5>-$5,567</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-list">
+                                                    <ul>
+                                                        <li>Pending</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row graph-row">
+                                            <div class="col-lg-2 col-2">
+                                                <div class="graph-arrow-2">
+                                                    <i class="fa-regular fa-arrow-up"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-head">
+                                                    <h4>Withdraw</h4>
+                                                    <p>1 Feb 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-2">
+                                                <div class="dollar-text">
+                                                    <h5>-$5,567</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-list">
+                                                    <ul>
+                                                        <li>Pending</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-12">
+                                                <div class="button-last">
+                                                    <a href="#" class="btn text-btn">See All
+                                                        <i class="fa-regular fa-arrow-down fa-rotate-270"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                        aria-labelledby="pills-contact-tab">
+                                        <div class="row graph-row">
+                                            <div class="col-lg-2 col-2">
+                                                <div class="graph-arrow">
+                                                    <i class="fa-regular fa-arrow-down"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-head">
+                                                    <h4>Withdraw</h4>
+                                                    <p>1 Feb 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-2">
+                                                <div class="dollar-text">
+                                                    <h5>-$5,567</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-list">
+                                                    <ul>
+                                                        <li>Pending</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row graph-row">
+                                            <div class="col-lg-2 col-2">
+                                                <div class="graph-arrow-2">
+                                                    <i class="fa-regular fa-arrow-up"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-head">
+                                                    <h4>Withdraw</h4>
+                                                    <p>1 Feb 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-2">
+                                                <div class="dollar-text">
+                                                    <h5>-$5,567</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-list">
+                                                    <ul>
+                                                        <li>Pending</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row graph-row">
+                                            <div class="col-lg-2 col-2">
+                                                <div class="graph-arrow">
+                                                    <i class="fa-regular fa-arrow-down"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-head">
+                                                    <h4>Withdraw</h4>
+                                                    <p>1 Feb 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-2">
+                                                <div class="dollar-text">
+                                                    <h5>-$5,567</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-list">
+                                                    <ul>
+                                                        <li>Pending</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row graph-row">
+                                            <div class="col-lg-2 col-2">
+                                                <div class="graph-arrow-2">
+                                                    <i class="fa-regular fa-arrow-up"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-head">
+                                                    <h4>Withdraw</h4>
+                                                    <p>1 Feb 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-2">
+                                                <div class="dollar-text">
+                                                    <h5>-$5,567</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-list">
+                                                    <ul>
+                                                        <li>Pending</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row graph-row">
+                                            <div class="col-lg-2 col-2">
+                                                <div class="graph-arrow-2">
+                                                    <i class="fa-regular fa-arrow-up"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-head">
+                                                    <h4>Withdraw</h4>
+                                                    <p>1 Feb 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-2">
+                                                <div class="dollar-text">
+                                                    <h5>-$5,567</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-4">
+                                                <div class="graph-list">
+                                                    <ul>
+                                                        <li>Pending</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-12">
+                                                <div class="button-last">
+                                                    <a href="#" class="btn text-btn">See All
+                                                        <i class="fa-regular fa-arrow-down fa-rotate-270"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Jquerry CDN Link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="/index.js"></script>
+
+
+</body>
+
+</html>
